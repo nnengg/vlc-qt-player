@@ -13,3 +13,9 @@
 ![直播](https://images.gitee.com/uploads/images/2020/0722/152030_dca00088_7615585.png "直播.PNG")
 ### 7.  直播全屏
 ![直播全屏](https://images.gitee.com/uploads/images/2020/0722/152041_52ceee9d_7615585.png "直播全屏.PNG")
+
+## vlclib
+附上东软镜像站当前最新vlc开源库：http://mirrors.neusoft.edu.cn/videolan/testing/vlc-3.0.0-rc8/vlc-3.0.0-rc8.tar.xz
+
+## 说明
+vlc开源库压缩包下载解压后的位置须和工程文件的.pro文件指定的包含文件和库文件位置保持一致，如将压缩包解压至D盘。
