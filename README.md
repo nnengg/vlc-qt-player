@@ -18,4 +18,6 @@
 附上东软镜像站当前最新vlc开源库：http://mirrors.neusoft.edu.cn/videolan/testing/vlc-3.0.0-rc8/vlc-3.0.0-rc8.tar.xz
 
 ## 说明
-vlc开源库压缩包下载解压后的位置须和工程文件的.pro文件指定的包含文件和库文件位置保持一致，如将压缩包解压至D盘。
+1. vlc开源库压缩包下载解压后的位置须和工程文件的.pro文件指定的包含文件和库文件位置保持一致，如将压缩包解压至D盘。
+2. 直播链文件channels.conf需要放在build-vlcplayer-xxx目录中，当然也可以更改源代码更换channels.conf的读取位置。
+3. 直播链中的频道会失效，可先用本地视频查看效果，直播链频道请自行查找。
