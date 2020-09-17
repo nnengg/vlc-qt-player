@@ -8,7 +8,7 @@ class GetConf : public QFile
 {
     Q_OBJECT
 public:
-    GetConf();
+    GetConf(QString filename);
 
     QStringList get_names();
     QStringList get_urls();

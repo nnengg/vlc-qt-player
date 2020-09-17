@@ -158,7 +158,7 @@
      <item>
       <widget class="QPushButton" name="local">
        <property name="text">
-        <string>本地</string>
+        <string>打开</string>
        </property>
       </widget>
      </item>

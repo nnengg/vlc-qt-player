@@ -15,7 +15,7 @@ VlcPlayer::VlcPlayer(QWidget *parent)
 {
     ui->setupUi(this);
     player = new VlcLib;
-    conf = new GetConf;
+    conf = new GetConf("channels.conf");
     QStringListModel * model = new QStringListModel(conf->get_names());
     ui->listView->setModel(model);
     ui->widget->installEventFilter(this);
@@ -47,6 +47,22 @@ bool VlcPlayer::eventFilter(QObject *watched, QEvent *event)
                     ui->widget->setWindowFlags(Qt::SubWindow);
                     ui->widget->showNormal();
                     return true;
+                }
+            }
+            else if (keyset->key() == Qt::Key_Return)
+            {
+                if (ui->widget->isFullScreen())
+                {
+                    this->show();
+                    ui->widget->setWindowFlags(Qt::SubWindow);
+                    ui->widget->showNormal();
+                    return true;
+                }
+                else
+                {
+                    ui->widget->setWindowFlags(Qt::Window);
+                    ui->widget->showFullScreen();
+                    this->hide();
                 }
             }
         }
@@ -83,7 +99,14 @@ bool VlcPlayer::eventFilter(QObject *watched, QEvent *event)
 
 void VlcPlayer::on_local_clicked()
 {
-    QString filename = QFileDialog::getOpenFileName(this, tr("Open video"), "", tr("video Files (*.mp4 *.avi *.wav)"));
+    QString filename = QFileDialog::getOpenFileName(this, tr("Video or Conf"), "", tr("File (*.mp4 *.avi *.wav *.conf)"));
+    if (filename.endsWith("conf"))
+    {
+        conf = new GetConf(filename);
+        QStringListModel * model = new QStringListModel(conf->get_names());
+        ui->listView->setModel(model);
+        return ;
+    }
     filename.replace("/", "\\");
     player->playFile(filename, (HWND)ui->widget->winId());
     ui->horizontalSlider->show();

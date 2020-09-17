@@ -1,8 +1,8 @@
 #include "getconf.h"
 
-GetConf::GetConf()
+GetConf::GetConf(QString filename)
 {
-    QFile file("channels.conf");
+    QFile file(filename);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
         return ;
     while (!file.atEnd()) {
