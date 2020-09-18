@@ -13,6 +13,8 @@
 ![直播](https://images.gitee.com/uploads/images/2020/0722/152030_dca00088_7615585.png "直播.PNG")
 ### 7.  直播全屏
 ![直播全屏](https://images.gitee.com/uploads/images/2020/0722/152041_52ceee9d_7615585.png "直播全屏.PNG")
+### 8.  允许文件扩展名
+![允许文件扩展名](https://images.gitee.com/uploads/images/2020/0918/114728_b39f5184_7615585.png "允许文件扩展名.PNG")
 
 ## vlclib
 附上东软镜像站当前最新vlc开源库：http://mirrors.neusoft.edu.cn/videolan/testing/vlc-3.0.0-rc8/win64/vlc-3.0.0-rc8-win64.zip
@@ -22,5 +24,5 @@
 
 ## 说明
 1. vlc开源库压缩包下载解压后的位置须和工程文件的.pro文件指定的包含文件和库文件位置保持一致，如将压缩包解压至D盘。
-2. 直播链文件channels.conf需要放在build-vlcplayer-xxx目录中，当然也可以更改源代码更换channels.conf的读取位置。（功能优化，在原功能的基础上增加可选择conf文件功能）
+2. 直播链文件channels.conf需要放在build-vlcplayer-xxx目录中，当然也可以更改源代码更换channels.conf的读取位置。（功能已优化，增加可选择打开本地视频文件，打开包含节目信息的conf文件或txt文件）
 3. 直播链中的频道会失效，可先用本地视频查看效果，直播链频道请自行查找。
