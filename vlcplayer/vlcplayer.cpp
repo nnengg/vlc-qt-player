@@ -99,8 +99,8 @@ bool VlcPlayer::eventFilter(QObject *watched, QEvent *event)
 
 void VlcPlayer::on_local_clicked()
 {
-    QString filename = QFileDialog::getOpenFileName(this, tr("Video or Conf"), "", tr("File (*.mp4 *.avi *.wav *.conf)"));
-    if (filename.endsWith("conf"))
+    QString filename = QFileDialog::getOpenFileName(this, tr("Video or Channel"), "", tr("Video File (*.mp4 *.avi *.wav);;Conf File (*.conf);; Txt File (*.txt)"));
+    if (filename.endsWith("conf") || filename.endsWith("txt"))
     {
         conf = new GetConf(filename);
         QStringListModel * model = new QStringListModel(conf->get_names());
