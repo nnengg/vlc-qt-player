@@ -17,7 +17,7 @@
 ![允许文件扩展名](https://images.gitee.com/uploads/images/2020/0918/114728_b39f5184_7615585.png "允许文件扩展名.PNG")
 
 ## vlclib
-附上东软镜像站当前最新vlc开源库：http://mirrors.neusoft.edu.cn/videolan/testing/vlc-3.0.0-rc8/win64/vlc-3.0.0-rc8-win64.zip
+附上东软镜像站当前最新vlc开源库：http://mirrors.neusoft.edu.cn/videolan/testing/vlc-3.0.0-rc7-win64-release.7z
 
 ## 快捷键说明
 界面全屏后，可用Enter键或Esc键退出全屏，Enter键可用于默认大小与全屏的循环切换。
