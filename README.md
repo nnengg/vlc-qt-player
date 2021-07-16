@@ -24,6 +24,6 @@
 
 ## 说明
 1. vlc开源库压缩包下载解压后的位置须和工程文件的.pro文件指定的包含文件和库文件位置保持一致，如将压缩包解压至D盘；
-2. 将vlclib库中的四个dll文件（axvlc.dll，libvlc.dll，libvlccore.dll和npvlc.dll）和plugins文件夹复制到工程相应的编译生成目录（如：E:\YourProjectDir\build-vlcplayer-Desktop_Qt_5_12_xxxxx-Release）中，程序的运行需要使用的部分运行库；
+2. 将vlclib库中的四个dll文件（axvlc.dll，libvlc.dll，libvlccore.dll和npvlc.dll）和plugins文件夹复制到工程相应的编译生成目录（如：E:\YourProjectDir\build-vlcplayer-Desktop_Qt_5_12_xxxxx-Release）中，程序的运行需要使用其中的部分运行库；
 3. 直播链文件channels.conf需要放在build-vlcplayer-xxx目录中，当然也可以更改源代码更换channels.conf的读取位置。（功能已优化，增加可选择打开本地视频文件，打开包含节目信息的conf文件或txt文件）
 4. 直播链中的频道会失效，可先用本地视频查看效果，直播链频道请自行查找。
